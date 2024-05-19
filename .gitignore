@@ -1,6 +1,6 @@
-prettierrc.json
-jsconfig.json
-vscode/
+.prettierrc.json
+.jsconfig.json
+.vscode/
 
 # Logs
 logs
