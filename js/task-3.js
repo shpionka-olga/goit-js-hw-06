@@ -8,19 +8,28 @@ class StringBuilder {
     }
 
     padEnd(str) {
-        if (str != null) {
+        if (this.#isInputValueValid(str)) {
             this.#value += str;
         }
     }
 
+    #isInputValueValid(str) {
+        if (str != null && typeof str === 'string') {
+            return true;
+        } else {
+            console.warn(`Input parameter: "str = ${str}" required String type`);
+            return false;
+        }
+    }
+
     padStart(str) {
-        if (str != null) {
+        if (this.#isInputValueValid(str)) {
             this.#value = str + this.#value;
         }
     }
 
     padBoth(str) {
-        if (str != null) {
+        if (this.#isInputValueValid(str)) {
             this.#value = str + this.#value + str;
         }
     }
